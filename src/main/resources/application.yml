@@ -1,18 +1,7 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/mydb
-    username: admin
-    password: q1w2e3R$
-    driver-class-name: org.postgresql.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      uri: mongodb://admana:000000@218.55.78.63:37018/togeter?authSource=admin
 
 jwt:
   secret: your_jwt_secret_key_here_it_should_be_at_least_256_bits_long
@@ -20,3 +9,9 @@ jwt:
 
 server:
   port: 8080
+
+
+collection:
+  product_collection: TB_PRODUCT_COLLECTION
+  member_collection: TB_MEMBER_COLLECTION
+  board_collection: TB_BOARD_COLLECTION
